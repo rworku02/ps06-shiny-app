@@ -71,9 +71,8 @@ server <- function(input, output) {
     )
   })
   sample <- reactive({
-    s1 <- newCause %>%
+    newCause %>%
       filter(Cause %in% input$userCause)
-      s1
   })
   output$plot <- renderPlot({
     p <- sample() %>%
